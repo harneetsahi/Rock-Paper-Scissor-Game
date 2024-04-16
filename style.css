@@ -44,6 +44,6 @@ h1 {
   font-size: 14px;
 }
 
-.reset-btn:active {
+.reset-btn:active, .auto-play-btn:active {
   opacity: 0.8;
 }
