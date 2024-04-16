@@ -8,27 +8,13 @@
   </head>
   <body>
     <h1>Rock Paper Scissors</h1>
-    <button
-      onclick="
-    playGame('rock')"
-      class="moves-btn js-rock-btn"
-    >
+    <button class="moves-btn js-rock-btn">
       <img class="icon" src="./rock.png" alt="" />
     </button>
-    <button
-      class="moves-btn js-paper-btn"
-      onclick="
-    playGame('paper')
-    "
-    >
+    <button class="moves-btn js-paper-btn">
       <img class="icon" src="./paper.png" alt="" />
     </button>
-    <button
-      class="moves-btn js-scissor-btn"
-      onclick="
-    playGame('scissor')
-    "
-    >
+    <button class="moves-btn js-scissor-btn">
       <img class="icon" src="./scissor.png" alt="" />
     </button>
 
@@ -37,16 +23,7 @@
     <p class="js-score score"></p>
 
     <button
-      class="reset-btn"
-      onclick="
-      totalScore.wins=0;
-      totalScore.losses=0;
-      totalScore.ties=0;
-      document.querySelector('.js-result').innerHTML = '';
-      document.querySelector('.js-moves').innerHTML = '';
-      updateScoreEl()
-;    "
-    >
+      class="reset-btn">
       Reset Score
     </button>
 
