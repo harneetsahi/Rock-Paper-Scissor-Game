@@ -33,7 +33,7 @@ h1 {
   font-weight: bold;
 }
 
-.reset-btn {
+.reset-btn, .auto-play-btn {
   padding: 10px 15px;
   border: none;
   border-radius: 20px;
