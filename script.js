@@ -25,6 +25,20 @@ document.querySelector(".js-reset-btn").addEventListener("click", () => {
   updateScoreEl();
 });
 
+// Playing the game with keys
+
+document.body.addEventListener("keydown", (event) => {
+  if (event.key === "r") {
+    playGame("rock");
+  } else if (event.key === "p") {
+    playGame("paper");
+  } else if (event.key === "s") {
+    playGame("scissor");
+  }
+});
+
+// Playing the game by clicking the icons on screen
+
 function playGame(playerMove) {
   const computerMove = pickComputerMove();
 
