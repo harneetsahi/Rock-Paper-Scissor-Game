@@ -4,6 +4,27 @@ const totalScore = {
   ties: 0,
 };
 
+document.querySelector(".js-rock-btn").addEventListener("click", () => {
+  playGame("rock");
+});
+
+document.querySelector(".js-paper-btn").addEventListener("click", () => {
+  playGame("paper");
+});
+
+document.querySelector(".js-scissor-btn").addEventListener("click", () => {
+  playGame("scissor");
+});
+
+document.querySelector(".js-reset-btn").addEventListener("click", () => {
+  totalScore.wins = 0;
+  totalScore.losses = 0;
+  totalScore.ties = 0;
+  document.querySelector(".js-result").innerHTML = "";
+  document.querySelector(".js-moves").innerHTML = "";
+  updateScoreEl();
+});
+
 function playGame(playerMove) {
   const computerMove = pickComputerMove();
 
