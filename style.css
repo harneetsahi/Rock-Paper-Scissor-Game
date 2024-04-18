@@ -44,6 +44,20 @@ h1 {
   font-size: 14px;
 }
 
-.reset-btn:active, .auto-play-btn:active {
+.reset-btn:active,
+.auto-play-btn:active,
+.yes-confirm-btn:active,
+.no-confirm-btn:active {
   opacity: 0.8;
+}
+
+.yes-confirm-btn,
+.no-confirm-btn {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 20px;
+  background-color: rgb(182, 204, 42);
+  color: rgb(56, 55, 55);
+  margin-top: 10px;
+  font-size: 14px;
 }
