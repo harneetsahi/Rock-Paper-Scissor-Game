@@ -17,13 +17,44 @@ document.querySelector(".js-scissor-btn").addEventListener("click", () => {
 });
 
 document.querySelector(".js-reset-btn").addEventListener("click", () => {
+ showResetConfirmation();
+});
+
+// Reset Confirmation
+
+function showResetConfirmation() {
+  document.querySelector(".reset-confirmation").innerHTML = `
+  Are you sure you want to reset the score?
+  <button class="yes-confirm-btn">Yes</button>
+  <button class="no-confirm-btn">No</button>
+  `;
+
+  document.querySelector(".yes-confirm-btn").addEventListener("click", () => {
+    resetScore();
+    hideResetConfirmation();
+  });
+
+  document.querySelector(".no-confirm-btn").addEventListener("click", () => {
+    hideResetConfirmation();
+  });
+}
+
+// Hide reset confirmation
+
+function hideResetConfirmation() {
+  document.querySelector(".reset-confirmation").innerHTML = "";
+}
+
+// Reset Score
+function resetScore() {
   totalScore.wins = 0;
   totalScore.losses = 0;
   totalScore.ties = 0;
   document.querySelector(".js-result").innerHTML = "";
   document.querySelector(".js-moves").innerHTML = "";
   updateScoreEl();
-});
+}
+
 
 // Playing the game with keys
 
@@ -118,8 +149,12 @@ document.querySelector(".auto-play-btn").addEventListener("click", () => {
       playGame(pickComputerMove());
     }, 1000);
     isAutoPlaying = true;
+    document.querySelector(".auto-play-btn").innerHTML = "Stop Playing";
+
   } else {
     clearInterval(intervalId);
     isAutoPlaying = false;
+    document.querySelector(".auto-play-btn").innerHTML = "Auto Play";
+
   }
 });
